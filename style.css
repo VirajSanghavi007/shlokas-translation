@@ -1,41 +1,41 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Gradient background */
+    color: #343a40; /* Dark text color */
+}
+
+.container {
+    height: 100%; /* Full height */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 10px; /* Rounded corners */
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: white; /* White background for container */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.output-box {
-    border: 2px solid #007BFF;
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+h1 {
+    margin-bottom: 20px;
+    color: #007bff; /* Primary color for title */
+    text-align: center; /* Center the title */
+    font-size: 2.5rem; /* Increase font size */
+    background: linear-gradient(135deg, #ff6f61, #6a82fb); /* Colorful gradient */
+    -webkit-background-clip: text; /* Clip background for text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    padding: 10px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners for text background */
 }
 
-h2 {
-    color: #007BFF;
+.btn-primary, .btn-secondary {
+    width: 100%; /* Full width buttons */
 }
 
-input {
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
+    color: white; /* Ensure text is visible 
 
-button {
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
