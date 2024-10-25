@@ -3,41 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css"> <!-- Link to the new CSS file -->
-    <title>Shlokas Translation</title>
+    <title>Shloka and Translation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        select {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Shlokas Translation</h1>
-        <form>
-            <div class="form-group">
-                <label for="shlokaInput">Which Shloka would you like to open?</label>
-                <input type="text" class="form-control" id="shlokaInput" placeholder="Type the name or number of the shloka...">
-            </div>
-            <button type="button" class="btn btn-primary btn-block" onclick="getTranslation()">Get Translation</button>
-            <button type="button" class="btn btn-secondary btn-block" onclick="getMantra()">Get Mantra</button>
-        </form>
-        <div class="output" id="translationOutput"></div>
-    </div>
+    <h1>Shloka and Translation Finder</h1>
+    
+    <label for="shlokaNumber">Select Shloka Number:</label>
+    <select id="shlokaNumber">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    
+    <label for="contentType">Select Content Type:</label>
+    <select id="contentType">
+        <option value="translation">Translation</option>
+        <option value="mantra">Mantra</option>
+    </select>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <button onclick="showContent()">Get Content</button>
+    
+    <div id="result" style="margin-top: 20px;"></div>
+
     <script>
-        function getTranslation() {
-            const shloka = document.getElementById('shlokaInput').value;
-            // Here you would implement the logic to get the translation
-            document.getElementById('translationOutput').innerHTML = `Translation for: <strong>${shloka}</strong>`;
+        function getContent(input, type) {
+            const content = {
+                translation: {
+                    "1": ["Translation 1.1", "Translation 1.2"],
+                    "2": ["Translation 2.1", "Translation 2.2"],
+                    "3": ["Translation 3.1", "Translation 3.2"],
+                    "4": ["Translation 4.1", "Translation 4.2"],
+                    "5": ["Translation 5.1", "Translation 5.2"]
+                },
+                mantra: {
+                    "1": ["Mantra 1.1", "Mantra 1.2"],
+                    "2": ["Mantra 2.1", "Mantra 2.2"],
+                    "3": ["Mantra 3.1", "Mantra 3.2"],
+                    "4": ["Mantra 4.1", "Mantra 4.2"],
+                    "5": ["Mantra 5.1", "Mantra 5.2"]
+                }
+            };
+            return content[type][input];
         }
 
-        function getMantra() {
-            const shloka = document.getElementById('shlokaInput').value;
-            // Here you would implement the logic to get the mantra
-            document.getElementById('translationOutput').innerHTML = `Mantra: <strong>${shloka}</strong>`;
+        function showContent() {
+            const input = document.getElementById("shlokaNumber").value;
+            const type = document.getElementById("contentType").value;
+            const selectedContent = getContent(input, type);
+            document.getElementById("result").innerHTML = selectedContent.join("<br/>");
         }
     </script>
 </body>
 </html>
-
 
