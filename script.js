@@ -126,24 +126,33 @@
                    "त्वां स्तोमा॑ अवीवृध॒न् त्वामु॒क्था श॑तक्रतो। त्वां व॑र्धन्तु नो॒ गिर॑:॥८॥\n" +
                    "अक्षि॑तोतिः सनेदि॒मं वाज॒मिन्द्र॑: सह॒स्रिण॑म्। यस्मि॒न् विश्वा॑नि॒ पौंस्या॑॥९॥\n" +
                    "मा नो॒ मर्ता॑ अ॒भि द्रु॑हन्त॒नूना॑मिन्द्र गिर्वणः। ईशा॑नो यवया व॒धम्॥१०॥"
-                ]
-            }
-        };
+                   ]
+            }  
 
-        return content[type][input];
+        return content[type][input] || "Shloka not found.";
     }
 
-    function displayContent() {
-        const input = document.getElementById("shlokaNumber").value;
-        const type = document.querySelector('input[name="type"]:checked').value;
-        const outputDiv = document.getElementById("output");
-        const contentArray = getContent(input, type);
-        
-        if (contentArray) {
-            outputDiv.innerHTML = contentArray.join("<br><br>");
-        } else {
-            outputDiv.innerHTML = "Content not found.";
-        }
+    function getTranslation() {
+        const shlokaInput = document.getElementById('shlokaInput').value.trim();
+        // Clear the mantra output before displaying the translation
+        document.getElementById('mantraOutput').innerText = ''; 
+        // Display the translation
+        const translation = getContent(shlokaInput, 'translation');
+        document.getElementById('translationOutput').innerText = translation;
+
+        // Log the input and output for debugging
+        console.log(`Input: ${shlokaInput}, Translation: ${translation}`);
+    }
+
+    function getMantra() {
+        const shlokaInput = document.getElementById('shlokaInput').value.trim();
+        // Clear the translation output before displaying the mantra
+        document.getElementById('translationOutput').innerText = ''; 
+        // Display the mantra
+        const mantra = getContent(shlokaInput, 'mantra');
+        document.getElementById('mantraOutput').innerText = mantra;
+
+        // Log the input and output for debugging
+        console.log(`Input: ${shlokaInput}, Mantra: ${mantra}`);
     }
 </script>
-
