@@ -32,18 +32,6 @@ function getContent(input, type) {
                   "O directive of the worthy thoughts, fervently igniting the minds of the intelligent. May Sarasvati bring prosperity to the rituals.\n" +
                   "Great One, O sea of depth."
         },
-        mantra: {
-            "1": "इन्द्रेहि॒ मत्स्यन्ध॑सो॒ विश्वे॑भिः सोम॒पर्व॑भिः। म॒हाँ अ॑भि॒ष्टिरोज॑सा॥1॥\n" +
-                  "एमे॑नं सृजता सु॒ते म॒न्दिमिन्द्रा॑य म॒न्दिने॑। चक्रिं॒ विश्वा॑नि॒ चक्र॑ये॥2॥\n" +
-                  "मत्स्वा॑ सुशिप्र म॒न्दिभि॒: स्तोमे॑भिर्विश्वचर्षणे। सचै॒षु सव॑ने॒ष्वा॥3॥\n" +
-                  "असृ॑ग्रमिन्द्र ते॒ गिर॒: प्रति॒ त्वामुद॑हासत। अजो॑षा वृष॒भं पति॑म्॥4॥\n" +
-                  "सं चो॑दय चि॒त्रम॒र्वाग् राध॑ इन्द्र॒ वरे॑ण्यम्। अस॒दित् ते॑ वि॒भु प्र॒भु॥5॥\n" +
-                  "अ॒स्मान्त्सु तत्र॑ चोद॒येन्द्र॑ रा॒ये रभ॑स्वतः। तुवि॑द्युम्न॒ यश॑स्वतः॥6॥\n" +
-                  "सं गोम॑दिन्द्र॒ वाज॑वद॒स्मे पृ॒थु श्रवो॑ बृ॒हत्। वि॒श्वायु॑र्धे॒ह्यक्षि॑तम्॥7॥\n" +
-                  "अ॒स्मे धे॑हि॒ श्रवो॑ बृ॒हद् द्यु॒म्नं स॑हस्र॒सात॑मम्। इन्द्र॒ ता र॒थिनी॒रिष॑:॥8॥\n" +
-                  "वसो॒रिन्द्रं॒ वसु॑पतिं गी॒र्भिर्गृ॒णन्त॑ ऋ॒ग्मिय॑म्। होम॒ गन्ता॑रमू॒तये॑॥9॥\n" +
-                  "सु॒ते सु॑ते॒ न्यो॑कसे बृ॒हद् बृ॑ह॒त एद॒रिः। इन्द्रा॑य शू॒षम॑र्चति॥10॥",
-        }
     };
 
     return content[type][input] || "Shloka not found.";
@@ -52,10 +40,5 @@ function getContent(input, type) {
 function getTranslation() {
     const shlokaInput = document.getElementById('shlokaInput').value.trim();
     document.getElementById('translationOutput').innerText = getContent(shlokaInput, 'translation');
-}
-
-function getMantra() {
-    const shlokaInput = document.getElementById('shlokaInput').value.trim();
-    document.getElementById('mantraOutput').innerText = getContent(shlokaInput, 'mantra');
 }
 

@@ -35,14 +35,7 @@ h1 {
     width: 100%; /* Full width buttons */
 }
 
-label {
-    font-weight: bold; /* Make labels bold */
-}
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
+    color: white; /* Ensure text is visible 
 
-.output {
-    margin-top: 20px; /* Space above output */
-    padding: 15px; /* Padding inside output */
-    border: 1px solid #dee2e6; /* Light border for output */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #f1f1f1; /* Light background for output */
-}
