@@ -1,6 +1,6 @@
 function getTranslation() {
     const shlokaInput = document.getElementById('shlokaInput').value.trim();
-    console.log("Input Shloka for Translation:", shlokaInput); // Log the input
+    console.log("Input Shloka for Translation:", shlokaInput); 
     let translation = ""; 
 
     if (shlokaInput === "1") {
@@ -47,7 +47,7 @@ function getTranslation() {
 
 function getMantra() {
     const shlokaInput = document.getElementById('shlokaInput').value.trim();
-    console.log("Input Shloka for Mantra:", shlokaInput); // Log the input
+    console.log("Input Shloka for Mantra:", shlokaInput); 
     let mantra = ""; 
 
     if (shlokaInput === "1") {
