@@ -45,12 +45,27 @@
 
     function getTranslation() {
         const shlokaInput = document.getElementById('shlokaInput').value.trim();
-        document.getElementById('translationOutput').innerText = getContent(shlokaInput, 'translation');
+        // Clear the mantra output before displaying the translation
+        document.getElementById('mantraOutput').innerText = ''; 
+        // Display the translation
+        const translation = getContent(shlokaInput, 'translation');
+        document.getElementById('translationOutput').innerText = translation;
+
+        // Log the input and output for debugging
+        console.log(`Input: ${shlokaInput}, Translation: ${translation}`);
     }
 
     function getMantra() {
         const shlokaInput = document.getElementById('shlokaInput').value.trim();
-        document.getElementById('mantraOutput').innerText = getContent(shlokaInput, 'mantra');
+        // Clear the translation output before displaying the mantra
+        document.getElementById('translationOutput').innerText = ''; 
+        // Display the mantra
+        const mantra = getContent(shlokaInput, 'mantra');
+        document.getElementById('mantraOutput').innerText = mantra;
+
+        // Log the input and output for debugging
+        console.log(`Input: ${shlokaInput}, Mantra: ${mantra}`);
     }
 </script>
+
 
