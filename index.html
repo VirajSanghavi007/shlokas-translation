@@ -1,10 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css"> <!-- Link to the new CSS file -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
     <title>Shlokas Translation</title>
 </head>
 <body>
@@ -19,7 +19,43 @@
             <button type="button" class="btn btn-secondary btn-block" onclick="getMantra()">Get Mantra</button>
         </form>
         <div class="output" id="translationOutput"></div>
+        <div class="output" id="mantraOutput"></div>
     </div>
-    <!-- Include your JavaScript here -->
+
+    <script>
+        function getTranslation() {
+            const shlokaInput = document.getElementById('shlokaInput').value.trim();
+            let translation = ""; // Initialize the translation variable
+
+            // Here you can add conditions to get the translation based on input
+            if (shlokaInput === "1") {
+                translation = "Translation of Shloka 1";
+            } else if (shlokaInput === "2") {
+                translation = "Translation of Shloka 2";
+            } else {
+                translation = "Shloka not found.";
+            }
+
+            // Display the translation in the translationOutput div
+            document.getElementById('translationOutput').innerText = translation;
+        }
+
+        function getMantra() {
+            const shlokaInput = document.getElementById('shlokaInput').value.trim();
+            let mantra = ""; // Initialize the mantra variable
+
+            // Here you can add conditions to get the mantra based on input
+            if (shlokaInput === "1") {
+                mantra = "Mantra for Shloka 1";
+            } else if (shlokaInput === "2") {
+                mantra = "Mantra for Shloka 2";
+            } else {
+                mantra = "Shloka not found.";
+            }
+
+            // Display the mantra in the mantraOutput div
+            document.getElementById('mantraOutput').innerText = mantra;
+        }
+    </script>
 </body>
 </html>
