@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
-    <title>Shlokas Translation</title>
+    <title>Shloka and Mantra Translator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-    <div class="container">
-        <h1>Shlokas Translation</h1>
-        <form>
-            <div class="form-group">
-                <label for="shlokaInput">Which Shloka would you like to open?</label>
-                <input type="text" class="form-control" id="shlokaInput" placeholder="Type the name or number of the shloka...">
-            </div>
-            <button type="button" class="btn btn-primary btn-block" onclick="getTranslation()">Get Translation</button>
-            <button type="button" class="btn btn-secondary btn-block" onclick="getMantra()">Get Mantra</button>
-        </form>
-        <div class="output" id="translationOutput"></div>
-        <div class="output" id="mantraOutput"></div>
-    </div>
+
+    <h1>Shloka and Mantra Translator</h1>
+    <input type="text" id="shlokaInput" placeholder="Enter Shloka Number (1-3)">
+    <button onclick="getTranslation()">Get Translation</button>
+    <button onclick="getMantra()">Get Mantra</button>
+
+    <div class="output-box" id="translationOutput"></div>
+    <div class="output-box" id="mantraOutput"></div>
 
     <script>
         function getContent(input, type) {
@@ -69,14 +63,21 @@
 
         function getTranslation() {
             const shlokaInput = document.getElementById('shlokaInput').value.trim();
-            document.getElementById('translationOutput').innerText = getContent(shlokaInput, 'translation');
+            document.getElementById('mantraOutput').innerText = ''; 
+            const translation = getContent(shlokaInput, 'translation');
+            document.getElementById('translationOutput').innerText = translation;
+            console.log(`Input: ${shlokaInput}, Translation: ${translation}`);
         }
 
         function getMantra() {
             const shlokaInput = document.getElementById('shlokaInput').value.trim();
-            document.getElementById('mantraOutput').innerText = getContent(shlokaInput, 'mantra');
+            document.getElementById('translationOutput').innerText = ''; 
+            const mantra = getContent(shlokaInput, 'mantra');
+            document.getElementById('mantraOutput').innerText = mantra;
+            console.log(`Input: ${shlokaInput}, Mantra: ${mantra}`);
         }
     </script>
+
 </body>
 </html>
 
