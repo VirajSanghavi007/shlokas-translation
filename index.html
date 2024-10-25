@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shlokas Translation</title>
-    <script src="script.js" defer></script>
+    <title>Shlokas and Translations</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS for styling -->
 </head>
 <body>
-    <h1>Shlokas and Translations</h1>
-    <label for="shlokaInput">Enter Shloka Number:</label>
-    <input type="text" id="shlokaInput" />
-    <button onclick="getTranslation()">Get Translation</button>
-    <div id="output"></div>
+    <header>
+        <h1>Shlokas and Translations</h1>
+    </header>
+    <main>
+        <form id="shloka-form">
+            <label for="shloka-input">Enter Mandala Number (1-10):</label>
+            <input type="text" id="shloka-input" required>
+            <button type="submit">Get Shloka</button>
+        </form>
+        <div id="output">
+            <!-- Output will be displayed here -->
+        </div>
+    </main>
+    <script src="script.js"></script> <!-- Link to JavaScript for functionality -->
 </body>
 </html>
