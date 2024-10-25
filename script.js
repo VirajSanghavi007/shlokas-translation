@@ -60,7 +60,7 @@
          "and may our prayers arise. In you, may all beings find refuge;\n" +
          "may no mortal harm us, O Indra, the strong one. May the lord of the riches lead us."
 };
-mantra = {
+mantra: {
     "1": [
         "९ मधुच्छन्दा वैश्वामित्रः। अग्निः। गायत्री。\n" +
         "अ॒ग्निमी॑ळे पु॒रोहि॑तं य॒ज्ञस्य॑ दे॒वमृ॒त्विज॑म्। होता॑रं रत्न॒धात॑मम्॥१॥\n" +
