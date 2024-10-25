@@ -2,41 +2,67 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Gradient background */
-    color: #343a40; /* Dark text color */
+    background: linear-gradient(135deg, #ffcc00, #ff6699); /* Vibrant gradient background */
+    color: #333; /* Dark text color */
+    font-family: 'Arial', sans-serif; /* Font family */
 }
 
 .container {
-    height: 100%; /* Full height */
+    height: auto; /* Allow container to adjust based on content */
     display: flex; /* Use flexbox for alignment */
     flex-direction: column; /* Arrange items in a column */
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
-    border: 1px solid #dee2e6; /* Light border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px;
-    background-color: white; /* White background for container */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px; /* Padding for container */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #007bff; /* Primary color for title */
+    color: #ff3366; /* Vibrant primary color for title */
     text-align: center; /* Center the title */
     font-size: 2.5rem; /* Increase font size */
-    background: linear-gradient(135deg, #ff6f61, #6a82fb); /* Colorful gradient */
+    background: linear-gradient(135deg, #ff6600, #ffcc00); /* Colorful gradient */
     -webkit-background-clip: text; /* Clip background for text */
     -webkit-text-fill-color: transparent; /* Make text color transparent */
-    padding: 10px; /* Padding around text */
+    padding: 15px; /* Padding around text */
     border-radius: 5px; /* Rounded corners for text background */
 }
 
-.btn-primary, .btn-secondary {
-    width: 100%; /* Full width buttons */
+.output-box {
+    border: 2px solid #007BFF; /* Bright blue border */
+    background-color: #ffffff; /* White background for output */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for output */
+    margin-top: 15px; /* Space above output */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
-.btn-primary:hover {
-    background-color: #0056b3; /* Darker shade of primary color */
-    color: white; /* Ensure text is visible */
+input {
+    padding: 12px; /* Padding for input */
+    margin-top: 10px; /* Space above input */
+    width: 100%; /* Full width */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #ff3366; /* Bright pink border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+button {
+    padding: 12px; /* Padding for button */
+    margin-top: 15px; /* Space above button */
+    background-color: #ff3366; /* Vibrant button color */
+    color: #ffffff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #e63946; /* Darker shade on hover */
 }
 
