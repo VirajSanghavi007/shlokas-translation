@@ -4,47 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to the new CSS file -->
     <title>Shlokas Translation</title>
-    <style>
-        body {
-            background-color: #f8f9fa; /* Light background color */
-            color: #343a40; /* Dark text color */
-        }
-        .container {
-            margin-top: 50px;
-            border: 1px solid #dee2e6; /* Light border */
-            border-radius: 10px; /* Rounded corners */
-            padding: 20px;
-            background-color: white; /* White background for container */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        .btn-primary {
-            background-color: #007bff; /* Bootstrap primary color */
-            border: none; /* Remove border */
-        }
-        .btn-primary:hover {
-            background-color: #0056b3; /* Darker shade on hover */
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Shlokas Translation</h1>
+        <h1>Shlokas Translation</h1>
         <form>
             <div class="form-group">
-                <label for="shlokaInput">Enter Shloka:</label>
-                <input type="text" class="form-control" id="shlokaInput" placeholder="Type your shloka here...">
+                <label for="shlokaInput">Which Shloka would you like to open?</label>
+                <input type="text" class="form-control" id="shlokaInput" placeholder="Type the name or number of the shloka...">
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Get Translation</button>
+            <button type="button" class="btn btn-primary btn-block" onclick="getTranslation()">Get Translation</button>
+            <button type="button" class="btn btn-secondary btn-block" onclick="getMantra()">Get Mantra</button>
         </form>
-        <div class="mt-4" id="translationOutput"></div>
+        <div class="output" id="translationOutput"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function getTranslation() {
+            const shloka = document.getElementById('shlokaInput').value;
+            // Here you would implement the logic to get the translation
+            document.getElementById('translationOutput').innerHTML = `Translation for: <strong>${shloka}</strong>`;
+        }
+
+        function getMantra() {
+            const shloka = document.getElementById('shlokaInput').value;
+            // Here you would implement the logic to get the mantra
+            document.getElementById('translationOutput').innerHTML = `Mantra: <strong>${shloka}</strong>`;
+        }
+    </script>
 </body>
 </html>
